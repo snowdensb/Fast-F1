@@ -84,7 +84,7 @@ jobs:
 
       - name: Restore cache for FastF1
         id: cache-doc-restore
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: ./doc_cache
            # Restore any matching cache independent of hash suffix. We cannot
@@ -150,7 +150,7 @@ jobs:
         # Save the cache even in case of a failure but only if the content of
         # the cached directory has changed.
         if: always() && steps.cache-doc-restore.outputs.cache-matched-key != hashFiles('./doc_cache/**/*.*')
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           key: fastf1-doc-cache-${{ hashFiles('./doc_cache/**/*.*') }}
           path: ./doc_cache
