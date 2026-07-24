@@ -23,7 +23,7 @@ jobs:
           token: ${{ secrets.GH_PAT_DOC_BUILD_REPO }}
   
       - name: Upload docs as artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: docs/_build/html/
 
