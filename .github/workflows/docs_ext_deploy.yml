@@ -15,7 +15,7 @@ jobs:
           mkdir -p docs/_build/html
 
       - name: Checkout documentation build from external repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         # skip for pull requests (no access to secret + unversioned build is sufficient)
         with:
           repository: theOehrly/fastf1-doc-build-output

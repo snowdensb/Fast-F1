@@ -33,7 +33,7 @@ jobs:
     name: Tests on ${{ matrix.python-version }} ${{ matrix.name-suffix }}
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup python
         uses: actions/setup-python@v6
@@ -87,7 +87,7 @@ jobs:
     name: Linting (Ruff)
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup python
         uses: actions/setup-python@v6
@@ -124,7 +124,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup python
         uses: actions/setup-python@v6
@@ -147,7 +147,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
