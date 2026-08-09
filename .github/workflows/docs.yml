@@ -158,7 +158,7 @@ jobs:
       - name: Push build changes to external repo
         # If this was either a release, run manually with publish=true or a push to main
         if: (!inputs.test-build) && ((github.event_name == 'release') || (github.ref == 'refs/heads/main') || inputs.publish)
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v11
         with:
           cwd: "docs/_build/html"
           add: "."
